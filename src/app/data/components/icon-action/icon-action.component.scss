@@ -1,0 +1,37 @@
+@import "../../../data/styles/mixins.scss";
+@import "../../../data/styles/props.scss";
+
+:host {
+  @include flex(center);
+  @include clickable(true);
+
+  //   disabled state
+  &.cm-disabled {
+    cursor: auto;
+    pointer-events: none;
+
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+
+    .cm-icon {
+      opacity: 0.2;
+    }
+  }
+}
+
+.cm-card-action-label {
+  // margin-left: 8px;
+  color:  #666874;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  max-width: 56px;
+  white-space: normal;
+  //word-break: break-word;
+
+  &.free-width {
+    max-width: none;
+  }
+}

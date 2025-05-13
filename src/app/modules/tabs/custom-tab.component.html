@@ -1,0 +1,12 @@
+<div class="scrollbar">
+    <ng-container *ngFor="let item of this.customTabsService.tabsList">
+        <div class="tabs-container">
+            <div class="custom-tabs" style="font-family: poppins;"
+                [ngStyle]="{ 'background-color' : item.isShow ? 'white' : '#E4EAF2', 'color': isTabSelected ? 'black' : 'red'}">
+                <button class="button" matTooltip="{{item.text }}" (click)="onOpen(item)">{{item.text | truncate:
+                    21}}</button>
+                <mat-icon class="icon-style" (click)="onClose(item)">close</mat-icon>
+            </div>
+        </div>
+    </ng-container>
+</div>

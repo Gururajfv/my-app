@@ -1,0 +1,94 @@
+@import '../../../data/styles/props.scss';
+
+.customwidth {
+    // overflow:hidden;
+    width: 100%;
+}
+
+.error {
+    color: red;
+    margin-top: -3px;
+}
+
+textarea {
+    resize: none;
+}
+
+.notverified {
+    color: #DB7C00;
+}
+
+.verified {
+    color: #13C200;
+}
+
+p {
+    font-size: 9px;
+    margin-bottom: 1px;
+    width: 56px;
+}
+
+.lbl-style {
+    color: $thunder;
+    font-size: 10px !important;
+    text-align: left;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    opacity: 1;
+    font-weight: 500;
+}
+
+.mat-input-element {
+    font-size: 12px;
+}
+
+app-icon-action {
+    margin-right: 10px;
+}
+
+.asterik-color {
+    color: red;
+}
+
+::ng-deep .mat-form-field-disabled .mat-form-field-flex {
+    background: #ECEEF2;
+    border-radius: 4px;
+    height: 36px;
+    margin: 0px !important;
+    display: inline-flex;
+    align-items: end;
+
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
+    color: #00000000;
+    height: 40px !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+    padding: 0px !important;
+}
+
+// ::ng-deep .mat-form-field-disabled .mat-form-field-infix{
+//   // margin: -4px !important;
+//   height: 40px !important;
+// }
+
+
+::ng-deep.mat-form-field-disabled .mat-form-field-underline {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0.42) 33%, #c2c7cc 0) !important;
+    background-size: 1px 100% !important;
+    background-repeat: repeat-x !important;
+}
+
+.custommat-input {
+    ::ng-deep .mat-form-field-infix {
+        display: inline-flex !important;
+        align-items: end !important;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    appearance: none;
+}

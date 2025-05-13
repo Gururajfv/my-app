@@ -1,0 +1,13 @@
+.header-main {
+    background-color: #FFFFFF;
+    display: flex;
+    gap: 1rem;
+    height: 50px;
+    justify-content: space-between;
+    border-bottom: 10px solid #a1a5b71a;
+    padding: 20px;
+}
+
+::ng-deep .mat-icon {
+    font-size: medium;
+}

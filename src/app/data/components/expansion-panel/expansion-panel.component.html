@@ -1,0 +1,54 @@
+<div>
+    <div class="expension-header-wrapper" (click)="onExpensionChange()" [class.disabled]="disable">
+        <div *ngIf="titleText">
+            <div class="expension-header-content">
+                <div>
+                    {{ titleText }}
+                </div>
+
+                <div>
+                    <mat-icon *ngIf="!panelOpenState">keyboard_arrow_down</mat-icon>
+                    <mat-icon *ngIf="panelOpenState">keyboard_arrow_up</mat-icon>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="titleText3">
+            <div class="expension-content">
+                <div>
+                    {{ titleText3 }}
+                </div>
+
+                <div>
+                    <mat-icon *ngIf="!panelOpenState">keyboard_arrow_down</mat-icon>
+                    <mat-icon *ngIf="panelOpenState">keyboard_arrow_up</mat-icon>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="titleText1">
+            <div class="expension-sub-header-content">
+                <div>
+                    {{ titleText1 }}
+                </div>
+
+                <div>
+                    <mat-icon *ngIf="!panelOpenState">keyboard_arrow_down</mat-icon>
+                    <mat-icon *ngIf="panelOpenState">keyboard_arrow_up</mat-icon>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="titleText2">
+            <div class="expension-sub-header-content1">
+                <div>
+                    {{ titleText2 }}
+                </div>
+
+                <div>
+                    <mat-icon *ngIf="!panelOpenState">keyboard_arrow_down</mat-icon>
+                    <mat-icon *ngIf="panelOpenState">keyboard_arrow_up</mat-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <ng-content *ngIf="panelOpenState"></ng-content>
+</div>

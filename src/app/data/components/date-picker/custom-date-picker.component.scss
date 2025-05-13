@@ -1,0 +1,24 @@
+.asterik-color {
+    color: red;
+  }
+  
+  .error {
+    margin-top: -3px !important;
+  }
+  
+  ::ng-deep .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-datepicker-toggle-default-icon {
+    padding: 0.1rem !important;
+  }
+  
+  .customdatepicker {
+    ::ng-deep .mat-form-field-flex {
+      height: 40px !important;
+      display: inline-flex !important;
+      align-items: end !important;
+    }
+  }
+  
+  .mat-datepicker-input{
+    font-size: 11px !important;
+    color: black;
+  }

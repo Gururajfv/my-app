@@ -1,0 +1,122 @@
+// .modalWrapper {
+//   position: relative !important;
+// }
+
+// .container-loan-data {
+//   overflow-x: hidden;
+//   overflow-y: scroll !important;
+//   height: 500vh;
+// }
+
+.animate-left,
+.animate-right {
+  opacity: 0;
+  transition: all 1.1s ease-out;
+  will-change: transform, opacity;
+  position: relative;
+}
+
+.animate-left {
+  transform: translateX(-50px);
+}
+
+.animate-right {
+  transform: translateX(50px);
+  text-align: center;
+}
+
+.animate-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ptag {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: math;
+  font-size: x-large;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+}
+
+.scroll-to-top {
+  background: red !important;
+  color: white;
+  z-index: 9999;
+  padding: 10px 15px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+// .card,
+// img:hover {
+//   // transform: translateY(-15px) scale(1.02);
+//   // box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+//   transform: scale(1.1);
+// }
+
+// .container {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 20px;
+//   justify-content: center;
+//   padding: 20px;
+// }
+
+// .card {
+//   background: #ffffff;
+//   padding: 20px;
+//   border-radius: 16px;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   width: 400px;
+// }
+
+// .card h2 {
+//   margin-top: 0;
+//   color: #374151;
+// }
+
+// .products {
+//   margin-top: 15px;
+//   border-top: 1px solid #ddd;
+//   padding-top: 10px;
+// }
+
+// .product {
+//   display: flex;
+//   gap: 10px;
+//   margin-bottom: 15px;
+//   background-color: #f9fafb;
+//   padding: 10px;
+//   border-radius: 12px;
+// }
+
+// .product img {
+//   width: 80px;
+//   height: 80px;
+//   object-fit: cover;
+//   border-radius: 8px;
+// }
+
+// .product-info h4 {
+//   margin: 0 0 5px 0;
+// }
+
+// .product-info p {
+//   margin: 2px 0;
+// }

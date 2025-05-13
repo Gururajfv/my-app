@@ -1,0 +1,21 @@
+<div class="login-wrapper">
+    <div class="login-background"></div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form [formGroup]="this.loginService.loginForm">
+            <input type="text" placeholder="Username" [formControl]="this.loginService.loginForm.controls.username" />
+            <input type="password" placeholder="Password"
+                [formControl]="this.loginService.loginForm.controls.password" />
+            <!-- <div class="password-wrapper">
+                <input [type]="hidePassword ? 'password' : 'text'" placeholder="Password"
+                    [formControl]="this.loginService.loginForm.controls.password" />
+                <span class="toggle-password" (click)="togglePasswordVisibility()">
+                    <i class="material-icons" style="color: dodgerblue;font-size: larger;margin-bottom: 12px;">
+                        {{ hidePassword ? 'visibility_off' : 'visibility' }}
+                    </i>
+                </span>
+            </div> -->
+            <button type="submit" (click)="login()">Login</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="compact-container">
+    <div class="row">
+        <div class="col-md-4 field-group">
+            <input type="date" [min]="minDateString" [max]="maxDateString" [(ngModel)]="selectedDate"
+                (change)="onChange()" />
+        </div>
+
+        <div class="col-md-4 field-group">
+            <input type="time" [(ngModel)]="selectedTime" (change)="onChange()" />
+        </div>
+
+        <div class="col-md-4 field-group">
+            <select [(ngModel)]="selectedPeriod" (change)="onChange()">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+            </select>
+        </div>
+    </div>
+</div>

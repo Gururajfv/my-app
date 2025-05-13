@@ -1,0 +1,84 @@
+::ng-deep .mat-dialog-container {
+    width: 80vw;
+    //height: 75vh;
+    max-width: 80vw;
+    max-height: 75vh;
+    overflow: hidden;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.mat-dialog-content {
+    max-height: calc(75vh - 100px);
+    overflow-y: auto;
+    padding: 10px 20px;
+}
+
+.mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px 12px !important;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:hover {
+    background: #f9f9f9;
+}
+
+.container-upload-style {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-style-title-doc {
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(128, 128, 128);
+    padding-bottom: 10px;
+}
+
+.add-color-popup {
+    color: black !important;
+    display: contents;
+}
+
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 18px;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: white;
+}
+
+.scroll-bar {
+    width: auto;
+    height: 60vh;
+    overflow-y: scroll !important;
+    overflow-x: scroll !important;
+    scrollbar-width: thin;
+    scrollbar-color: #26A9E0 #e5ead6;
+    padding-bottom: 0rem;
+}

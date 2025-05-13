@@ -1,0 +1,57 @@
+<mat-label class="lbl-style">{{inputlabel}} <span *ngIf="isAsterisk">
+        <span class="asterik-color" *ngIf="required">*</span>
+    </span>
+</mat-label>
+<br />
+<div class="custommat-input">
+    <mat-form-field [ngStyle]="{'width' : customWidth }" appearance="outline" *ngIf="inputType=='text'"
+        floatLabel="never">
+        <!-- <app-text-input-dropdown matPrefix *ngIf="isPrefixEnabled"></app-text-input-dropdown> -->
+        <input matInput *ngIf="inputType=='text' || inputType=='password'" [id]="inputId" placeholder="{{placeHolder}}"
+            [ngClass]="inputClass" [maxlength]="maxlength" autocomplete="off" [formControl]="controlname"
+            [minlength]="minlength" [required]="required" [readonly]="readonly" (onchange)="changeInput($event)"
+            (paste)="onPaste($event)" (keypress)="omit_special_char($event)" type={{allowedType}} appDisableControl
+            (blur)='onBlur($event)' (keydown.enter)="enterValue($event)" appFloatingPointsValidations
+            (keyup)="enterValue($event)">
+        <div *ngIf="isSearch" class="search">
+            <mat-icon style="display: flex;font-size: x-large;height: 20px;width: 25px;cursor: pointer;"
+                (click)="search()">search</mat-icon>
+            <!-- <app-icon-action [icon]="'search'" [disabled]="isControlDisabled()" [freeWidth]="true" (click)="search()">
+            </app-icon-action> -->
+        </div>
+        <!-- <div *ngIf="isVerifiedVisible" class="verified">
+            <p> verified</p>
+        </div>
+        <div *ngIf="isNotVerifiedVisible" class="notverified">
+            <p>Not verified</p>
+        </div> -->
+    </mat-form-field>
+</div>
+<!-- <mat-form-field class="customwidth" [ngClass]="matClass" appearance="outline" *ngIf="inputType=='textArea'">
+    <textarea matInput *ngIf="inputType=='textArea'" placeholder="{{placeHolder}}"
+      class="form-control inputclass is-invalid customwidth" [formControl]="controlname" [required]="required"
+      [readonly]="readonly"></textarea>
+  </mat-form-field> -->
+
+<ng-container *ngIf="controlname.invalid && controlname.touched">
+    <div class="error">
+        <div *ngIf="controlname.errors?.required">
+            {{requiredErrorMessage}}
+        </div>
+        <div *ngIf="controlname.errors?.minlength">
+            {{minlengthErrorMessage}}
+        </div>
+        <div *ngIf="controlname.errors?.maxlength">
+            {{maxlengthErrorMessage}}
+        </div>
+        <div *ngIf="controlname.errors?.pattern">
+            {{patternErrorMessage}}
+        </div>
+        <div *ngIf="controlname.errors?.invaliddigits">
+            {{invaliddigitsErrorMessage}}
+        </div>
+        <div *ngIf="controlname.errors?.max">
+            {{invalidMaxRange}}
+        </div>
+    </div>
+</ng-container>

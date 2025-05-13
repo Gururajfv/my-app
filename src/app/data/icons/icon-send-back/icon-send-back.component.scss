@@ -1,0 +1,13 @@
+.svg-container {
+    display: inline-block; /* Ensures the container wraps tightly around the SVG */
+    padding: 5px; /* Adds padding inside the border */
+    border: 2px solid #1831d6; /* Adds a solid border with the same color as the SVG fill */
+    border-radius: 5px; /* Optional: Adds rounded corners to the border */
+    // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow for a 3D effect */
+    cursor: pointer; /* Changes cursor to a pointer on hover */
+  }
+  
+  .svg-container svg {
+    display: block; /* Ensures the SVG fills its container */
+  }
+  

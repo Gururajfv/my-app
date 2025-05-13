@@ -1,0 +1,52 @@
+<ng-container [ngSwitch]="icon">
+  <app-icon-download *ngSwitchCase="'download'"></app-icon-download>
+  <app-icon-profile *ngSwitchCase="'profile'"></app-icon-profile>
+  <app-icon-logo *ngSwitchCase="'logo'"></app-icon-logo>
+  <app-icon-time *ngSwitchCase="'time'"></app-icon-time>
+  <app-icon-location *ngSwitchCase="'location'"></app-icon-location>
+  <app-icon-side-logo *ngSwitchCase="'side-logo'"></app-icon-side-logo>
+  <app-icon-notification *ngSwitchCase="'notification'"></app-icon-notification>
+  <app-icon-three-dots *ngSwitchCase="'three-dots'"></app-icon-three-dots>
+
+
+  <app-icon-search *ngSwitchCase="'search'"></app-icon-search>
+  <app-icon-filter *ngSwitchCase="'tablefilter'"></app-icon-filter>
+  <app-icon-settings *ngSwitchCase="'tablesettings'"></app-icon-settings>
+  <app-icon-table-search *ngSwitchCase="'tablesearch'"></app-icon-table-search>
+  <app-icon-search-header *ngSwitchCase="'search-header'"></app-icon-search-header>
+
+  <app-final-loan-approval *ngSwitchCase="'final-loan-approval'"></app-final-loan-approval>
+
+  <app-true-check *ngSwitchCase="'true-check'"></app-true-check>
+
+  <app-icon-data-enrichment *ngSwitchCase="'icon-data-enrichment'" [isIconColorOne]="isIconColorOne">
+  </app-icon-data-enrichment>
+
+
+  <app-icon-personal-discussion *ngSwitchCase="'icon-personal-discussion'"></app-icon-personal-discussion>
+
+  <app-icon-collateral-evaluation *ngSwitchCase="'icon-collateral-evaluation'"></app-icon-collateral-evaluation>
+
+  <app-icon-credit-underwriting *ngSwitchCase="'icon-credit-underwriting'"></app-icon-credit-underwriting>
+
+  <app-icon-save *ngSwitchCase="'icon-save'"></app-icon-save>
+  <app-icon-approve *ngSwitchCase="'icon-approve'"></app-icon-approve>
+  <app-icon-reject *ngSwitchCase="'icon-reject'"></app-icon-reject>
+  <app-icon-hold *ngSwitchCase="'icon-hold'"></app-icon-hold>
+  <app-icon-send-back *ngSwitchCase="'icon-send-back'"></app-icon-send-back>
+  <app-icon-upload *ngSwitchCase="'icon-upload'"></app-icon-upload>
+  <app-icon-deviation *ngSwitchCase="'icon-deviation'"></app-icon-deviation>
+  <app-icon-bre *ngSwitchCase="'icon-bre'"></app-icon-bre>
+  <app-icon-comments *ngSwitchCase="'icon-comments'"></app-icon-comments>
+  <app-icon-edit *ngSwitchCase="'icon-edit'" [hidden]="Hide_edit" ></app-icon-edit>
+  <app-icon-query *ngSwitchCase="'icon-query'"></app-icon-query>
+  <app-icon-review-log *ngSwitchCase="'icon-review-log'"></app-icon-review-log>
+  <app-icon-behind-the-scene *ngSwitchCase="'icon-behind-the-scene'"></app-icon-behind-the-scene>
+  <app-icon-eye *ngSwitchCase="'icon-eye'"></app-icon-eye>
+
+
+</ng-container>
+<!-- label -->
+<div class="cm-card-action-label" [class.free-width]="freeWidth">
+  <ng-content></ng-content>
+</div>

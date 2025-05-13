@@ -1,0 +1,79 @@
+// @import './my-app/src/app/data/styles/mixins.scss';
+@import '../../data/styles/mixins.scss';
+@import '../../data/styles/props.scss';
+
+.custom-tabs {
+    padding-bottom: 0.2rem !important;
+    width: auto !important;
+    @include clickable();
+    text-align: left;
+}
+
+.button {
+    background-color: transparent;
+    border-color: transparent;
+    margin-left: auto !important;
+    font-weight: 500;
+    opacity: 100%;
+    font-size: 10px;
+    color: $thunder;
+    // color: #191919 !important;
+    display: inline-flex;
+    inline-size: 140px;
+    @include clickable();
+}
+
+.button ::before :active {
+    color: #E4EAF2;
+}
+
+.icon-style {
+    color: $shuttle-grey;
+    // background-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    vertical-align: middle;
+    //margin-left: auto !important;
+    display: inline-flex;
+    align-items: center;
+    @include clickable();
+    font-size: medium;
+}
+
+.tabs-container {
+    display: inline-block;
+    margin-right: 5px;
+    //@include clickable();
+}
+
+.scrollbar {
+    display: flex;
+    flex-grow: 1;
+    overflow: auto;
+    white-space: nowrap;
+    background-color: #A1A5B71A;
+}
+
+::ng-deep .mat-tab-header-pagination {
+    display: none !important;
+}
+
+::ng-deep .mat-tab-header::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: #F5F5F5;
+    overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+    height: 4px;
+    background-color: #F5F5F5;
+    overflow-x: auto;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+
+    background-color: #26A9E0;
+    overflow-x: auto;
+}

@@ -1,0 +1,76 @@
+<div class="container-upload-popup-style">
+  <div class="text-style-sub-title-doc">DOCUMENT UPLOAD</div>
+  <mat-icon class="add-color-popup" (click)="onCancelClick()">close</mat-icon>
+</div>
+<div class="center">
+  <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="handleFileInput($event)" (onFileOver)="fileOver($event)"
+    (onFileLeave)="fileLeave($event)" accept="data.acceptType">
+    <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+      Drop File Or Upload
+      <app-button [text]="'Upload File'" [textcolor]="'#FFFFFF'" (onClick)="openFileSelector()"></app-button>
+    </ng-template>
+  </ngx-file-drop>
+  <div class="upload-table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>File Name</th>
+        </tr>
+      </thead>
+      <tbody class="upload-name-style">
+        <tr *ngFor="let item of files; let i = index">
+          <td><strong>{{ item.relativePath }}</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- <app-text-input inputlabel="REMARK" inputType="text" [controlname]=""></app-text-input> -->
+  <div class="footer-button">
+    <app-button [border]="'1px solid #26A9E0'" [text]="'Cancel'" [textcolor]="'#26A9E0'"
+      [color]="'primary'"></app-button>
+    <app-button [text]="'Save'" [textcolor]="'#FFFFFF'" (onClick)="onSubmitClick()"></app-button>
+  </div>
+</div>
+
+
+<!-- <div class="container-upload-popup-style">
+    <div class="text-style-sub-title-doc">DOCUMENT UPLOAD</div>
+    <mat-icon class="add-color-popup" (click)="onCancelClick()">close</mat-icon>
+  </div>
+  <div class="center">
+    <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)"
+      (onFileLeave)="fileLeave($event)" accept="data.acceptType">
+      <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+        Drop File Or Upload
+        <app-buttons [text]="'Upload File'" [textcolor]="'#FFFFFF'" (onClick)="openFileSelector()"></app-buttons>
+      </ng-template>
+    </ngx-file-drop>
+    <div class="upload-table">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>File Name</th>
+          </tr>
+        </thead>
+        <tbody class="upload-name-style">
+          <tr *ngFor="let item of files; let i = index">
+            <td>
+              <strong>{{ item.relativePath }}</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <app-text-input inputlabel="REMARK" inputType="text" [controlname]="
+        this.businessKycService.documentVerificationForm.controls.remarks
+      "></app-text-input>
+    <div class="footer-button">
+      <div>
+        <app-buttons [border]="'1px solid #26A9E0'" [text]="'Cancel'" (onClick)="onCancel()" [textcolor]="'#000000'"
+          [textcolor]="'#26A9E0'" [color]="'primary'"></app-buttons>
+      </div>
+      <div style="margin-left: 30px">
+        <app-buttons [text]="'Save'" [textcolor]="'#FFFFFF'" (onClick)="onSubmitClick()"></app-buttons>
+      </div>
+    </div>
+  </div> -->

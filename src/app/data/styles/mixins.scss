@@ -1,0 +1,43 @@
+@mixin flex($align: null, $justify: null, $direction: null, $wrap: wrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+
+    >* {
+        flex: 0 0 auto;
+    }
+}
+
+@mixin clickable($effect: false, $selectable: none) {
+    cursor: pointer;
+    user-select: $selectable;
+
+    @if($effect) {
+        &:hover {
+            opacity: .8;
+        }
+
+        &:active {
+            opacity: .6;
+        }
+    }
+}
+
+
+@mixin padding($padding) {
+    box-sizing: border-box;
+    padding: $padding;
+}
+
+@mixin border($border) {
+    box-sizing: border-box;
+    border: $border;
+}
+
+
+@mixin box($size) {
+    width: $size;
+    height: $size;
+}

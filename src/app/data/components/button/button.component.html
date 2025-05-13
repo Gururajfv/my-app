@@ -1,0 +1,7 @@
+<button type="button" [disabled]="isDisabled" class="mat-elevation-z0" mat-raised-button
+    [style.background-color]="color" [style.color]="textcolor" [style.width]="width" [style.height]="height"
+    [style.border]="border" (click)="onClickbutton()" [style.fontSize]="fontSize" [style.margin-top]="marginTop"
+    [style.margin-right]="marginRight" [style.margin-left]="marginLeft" [style.padding-bottom]="paddingBottom"
+    [style.padding-top]="paddingTop">
+    <ng-content class="content-style"></ng-content> {{text}}
+</button>

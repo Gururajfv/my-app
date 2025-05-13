@@ -1,0 +1,206 @@
+<div class="container">
+    <div class="col-md-4 mb-4">
+        <app-text-input [title]="'text'" [isSearch]="true" (onSearch)="getPopup()" [inputlabel]="'data'"
+            [allowedType]="'text'" [controlname]="this.loginService.loginForm.controls.username"></app-text-input>
+    </div>
+    <div class="banner-container mt-5">
+        <div class="banner-content">
+            <h1 class="banner-title">Drive the Future</h1>
+            <p class="banner-subtitle">Clean. Efficient. Electric.</p>
+            <!-- <button mat-raised-button color="accent">Explore Vehicles</button> -->
+        </div>
+    </div>
+    <div style="width: 100%; height: auto; padding-top: 30px;">
+        <div style="width: 80%; margin: auto; margin-top: 10px;">
+            <ngb-carousel [showNavigationIndicators]="true" [showNavigationArrows]="true" [interval]="1500">
+                <ng-template ngbSlide>
+                    <img src="../../../assets/images/resize-1746102409819324013v1.png" class="d-block w-100 rounded"
+                        alt="First Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <!-- <h5>First Slide Label</h5> -->
+                        <p>Going Green with Every Mile.</p>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <img src="../../../assets/images/resize-17461024771259759967v2.jpg" class="d-block w-100 rounded"
+                        alt="Second Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <!-- <h5>Second Slide Label</h5> -->
+                        <p style="color: black;">Drive the Change for Tomorrow.</p>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <img src="../../../assets/images/resize-1746102544367229038v3.jpg" class="d-block w-100 rounded"
+                        alt="Third Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <!-- <h5>Third Slide Label</h5> -->
+                        <p>Efficiency Meets Elegance.</p>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div #section class="row align-items-center animate-on-scroll-group">
+            <div class="col-md-6 animate-left">
+                <img src="../../../assets/images/subsidy-on-electric-vehicles.png" class="img-fluid"
+                    alt="Sample Image" />
+            </div>
+            <div class="col-md-6 animate-right">
+                <!-- <h2>Awesome Title</h2> -->
+                <p class="ptag">"Drive Green, Finance Smart," "Powering the Future, Financially," and "Electric
+                    Dreams,
+                    Affordable
+                    Realities."</p>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div #section1 class="row align-items-center animate-on-scroll-group">
+            <div class="col-md-6 animate-left">
+                <!-- <h2>Awesome Title</h2> -->
+                <p class="ptag">"Get flexible loans for Electric Vehicles, designed to fit your budget"</p>
+            </div>
+            <div class="col-md-6 animate-right">
+                <img src="../../../assets/images/riksha.png" class="img-fluid" alt="Sample Image" />
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../../../assets/images/c1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Card title</h5> -->
+                        <p class="card-text text-center">In order to have a clean air in cities, you have to go
+                            electric.</p>
+                    </div>
+                    <!-- <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../../../assets/images/c2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Card title</h5> -->
+                        <p class="card-text text-center"> The time is right for electric Vehicles - in fact, the time is
+                            critical</p>
+                    </div>
+                    <!-- <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="../../../assets/images/c3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Card title</h5> -->
+                        <p class="card-text text-center">This is a wider card with more content to show that equal
+                            height action.
+                        </p>
+                    </div>
+                    <!-- <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <div>
+                <a href="pagenotfound" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="pagenotfound" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="pagenotfound" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="pagenotfound" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="pagenotfound" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="pagenotfound" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>Company name
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="/pagenotfound" class="text-reset">Two Wheelers</a>
+                        </p>
+                        <p>
+                            <a href="/pagenotfound" class="text-reset">Three Wheelers</a>
+                        </p>
+                        <p>
+                            <a href="/pagenotfound" class="text-reset">Four Wheelers</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="pagenotfound" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="/pagenotfound" class="text-reset">Help</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i> JP Nagar, 7th Phase, Bengaluru 510007, KA</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            {{mail}}
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2025 Copyright:
+            <a class="text-reset fw-bold" href="/dashboard">xyz.com</a>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top btn btn-danger rounded-circle position-fixed" style="bottom: 40px; right: 40px;"
+        *ngIf="showScrollButton" (click)="scrollToTop()">
+        ↑
+    </button>
+</div>

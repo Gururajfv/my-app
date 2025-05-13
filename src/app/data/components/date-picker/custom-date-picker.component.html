@@ -1,0 +1,19 @@
+<mat-label class="lbl-style">{{ inputlabel }}
+    <span class="asterik-color" *ngIf="required">*</span></mat-label>
+<br />
+<div class="customdatepicker">
+    <mat-form-field appearance="outline">
+        <input matInput [matDatepicker]="picker" [min]="minDate" [max]="maxDate" [formControl]="controlname"
+            placeholder="{{ placeHolder }}" [required]="required" (dateChange)="onDateValueChange($event)"
+            [disabled]="disabled" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+</div>
+<ng-container *ngIf="controlname.invalid && controlname.touched">
+    <div class="error">
+        <div *ngIf="controlname.errors?.required">
+            {{ requiredErrorMessage }}
+        </div>
+    </div>
+</ng-container>

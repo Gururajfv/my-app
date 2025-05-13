@@ -1,0 +1,34 @@
+<div class="container-upload-style">
+    <div class="text-style-title-doc">{{title}}</div>
+    <div class="search-container">
+        <mat-form-field appearance="outline" style="display: flex;max-width: 13rem;">
+            <input matInput (keyup)="applyFilter($event)" placeholder="Search" />
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+    </div>
+    <mat-icon class="add-color-popup" (click)="onCloseClick()">close</mat-icon>
+</div>
+<div class="scroll-bar" id="style-4">
+    <!-- <mat-dialog-content> -->
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!-- Dynamic Column Generation -->
+        <ng-container *ngFor="let column of columns" [matColumnDef]="column.key">
+            <th mat-header-cell *matHeaderCellDef> {{ column.value | titlecase }} </th>
+            <td mat-cell *matCellDef="let element" (click)="rowClick(element)"> {{ element[column.key] }} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" [class.sticky-header]="stickyHeader"
+            [ngClass]="{'sticky-header': stickyHeader}"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+    <!-- </mat-dialog-content> -->
+</div>
+
+<!-- <mat-dialog-actions>
+  </mat-dialog-actions> -->
+<!-- <mat-dialog-actions>
+    <mat-icon mat-button (click)="closeDialog()">close</mat-icon>
+    <button mat-button (click)="closeDialog()">Close</button>
+  </mat-dialog-actions> -->
