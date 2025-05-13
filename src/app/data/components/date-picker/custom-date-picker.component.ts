@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import { FormControl } from "@angular/forms";
+import { UntypedFormControl } from "@angular/forms";
 import { MomentDateAdapter } from "@angular/material-moment-adapter";
 import { DateAdapter, MAT_DATE_LOCALE, MAT_DATE_FORMATS } from "@angular/material/core";
 import { Moment } from "moment";
@@ -24,7 +24,7 @@ export const MY_FORMATS = {
 })
 export class CustomDatePickerComponent implements OnInit {
     
-    @Input() controlname: FormControl | any;
+    @Input() controlname: UntypedFormControl | any;
     @Input() requiredErrorMessage?: string | any = 'This Date Field is Required';
     @Input() minlengthErrorMessage?: string | any = '';
     @Input() required?: boolean | any = false;

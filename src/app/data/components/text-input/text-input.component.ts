@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
-import { FormControl } from "@angular/forms";
+import { UntypedFormControl } from "@angular/forms";
 
 @Component({
     selector: 'app-text-input',
@@ -23,7 +23,7 @@ export class TextInputComponent implements OnInit {
     @Input() inputId?: string | any = '';
     @Input() placeHolder?: string | any = null;
     @Input() inputClass?: string | any;
-    @Input() controlname: FormControl | any;
+    @Input() controlname: UntypedFormControl | any;
     @Input() minlength: any = '';
     @Input() maxlength: any = '';
     @Input() readonly?: boolean | any = false;

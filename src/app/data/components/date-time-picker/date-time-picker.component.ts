@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
-import { FormControl } from "@angular/forms";
+import { UntypedFormControl } from "@angular/forms";
 
 @Component({
     selector: 'app-date-time-picker',
@@ -9,7 +9,7 @@ import { FormControl } from "@angular/forms";
 export class DateTimePickerComponent implements OnInit {
     @Input() mindate: Date | null = null;
     @Input() maxdate: Date | null = null;
-    @Input() controlname: FormControl = new FormControl();
+    @Input() controlname: UntypedFormControl = new UntypedFormControl();
     minDateString: string = '';
     maxDateString: string = '';
     // mindate: Date = new Date();
