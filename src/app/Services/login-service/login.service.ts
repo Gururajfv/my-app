@@ -1,13 +1,13 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { FormControl, FormGroup } from "@angular/forms";
+import { UntypedFormControl, UntypedFormGroup } from "@angular/forms";
 import { Observable } from "rxjs";
 
 @Injectable({
     providedIn: 'root',
 })
 export class LoginService {
-    loginForm: FormControl | any;
+    loginForm: UntypedFormControl | any;
 
     constructor(
         private http: HttpClient,
@@ -16,9 +16,9 @@ export class LoginService {
     }
 
     form() {
-        return new FormGroup({
-            username: new FormControl(''),
-            password: new FormControl('')
+        return new UntypedFormGroup({
+            username: new UntypedFormControl(''),
+            password: new UntypedFormControl('')
         })
     }
 

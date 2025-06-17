@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild } from "@angular/core";
-import { FormControl, FormGroup } from "@angular/forms";
+import { UntypedFormControl, UntypedFormGroup } from "@angular/forms";
 import { MatDialog } from "@angular/material/dialog";
 import { UploadPopupComponent } from "src/app/data/components/upload-popup/upload-popup.component";
 import { CommonService } from "src/app/Services/common-service/common.service";
@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     maxDate: any = null;
     // mindate: Date = new Date();
     // maxdate: Date = new Date(new Date().setDate(new Date().getDate() + 1));
-    form: FormControl | any;
+    form: UntypedFormControl | any;
     mail: string = 'info@example.com';
     selectedDateTime = {
         date: '',
@@ -29,8 +29,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
     ngOnInit(): void {
         // this.get();
-        this.form = new FormGroup({
-            date: new FormControl({ value: '', disabled: false }),
+        this.form = new UntypedFormGroup({
+            date: new UntypedFormControl({ value: '', disabled: false }),
         })
     }
 
