@@ -127,6 +127,7 @@ export class AppComponent implements OnInit {
   handleLoginSuccess() {
     const uName = this.loginService.loginForm.controls.username.value;
     const pass = this.loginService.loginForm.controls.password.value;
+    console.log(uName + '&' + pass)
     if (uName == this.UserName && pass == this.Password) {
       // this.isLoggedIn = true;
       this.localstoarageService.setLocalStorage('isLoggedIn', 'true');

@@ -14,10 +14,19 @@
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 
-$kids-typography: mat.define-typography-config($font-family: 'Poppins'
+$kids-typography: mat.define-legacy-typography-config($font-family: 'Poppins'
     );
 
-@include mat.core($kids-typography);
+// TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.
+//  The following line adds:
+//    1. Default typography styles for all components
+//    2. Styles for typography hierarchy classes (e.g. .mat-headline-1)
+//  If you specify typography styles for the components you use elsewhere, you should delete this line.
+//  If you don't need the default component typographies but still want the hierarchy styles,
+//  you can delete this line and instead use:
+//    `@include mat.legacy-typography-hierarchy($kids-typography);`
+@include mat.all-legacy-component-typographies($kids-typography);
+@include mat.legacy-core();
 
 // @include mat.core($my-custom-level);
 
@@ -43,7 +52,7 @@ $admin-portal-theme: mat.define-light-theme((color: (primary: $admin-portal-prim
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($admin-portal-theme);
+@include mat.all-legacy-component-themes($admin-portal-theme);
 
 /* You can add global styles to this file, and also import other style files */
 
@@ -294,7 +303,7 @@ input::placeholder {
 }
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import 'bootstrap/scss/bootstrap';
 
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";

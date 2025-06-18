@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { MatDialogModule } from "@angular/material/dialog";
+import { MatLegacyDialogModule as MatDialogModule } from "@angular/material/legacy-dialog";
 import { MaterialModule } from "../material/material.module";
 import { CommonModule } from "@angular/common";
 import { LoaderComponent } from "./loader.component";

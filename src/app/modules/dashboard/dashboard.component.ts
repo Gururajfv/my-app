@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, HostListener, OnInit, Output, ViewChild } from "@angular/core";
 import { UntypedFormControl, UntypedFormGroup } from "@angular/forms";
-import { MatDialog } from "@angular/material/dialog";
+import { MatLegacyDialog as MatDialog } from "@angular/material/legacy-dialog";
 import { UploadPopupComponent } from "src/app/data/components/upload-popup/upload-popup.component";
 import { CommonService } from "src/app/Services/common-service/common.service";
 
