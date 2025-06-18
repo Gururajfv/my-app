@@ -1,6 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
-import { MatDialogModule } from "@angular/material/dialog";
+import { MatLegacyDialogModule as MatDialogModule } from "@angular/material/legacy-dialog";
 import { MaterialModule } from "src/app/modules/material/material.module";
 import { ButtonModule } from "../button/button.module";
 import { NgxFileDropModule } from "ngx-file-drop";

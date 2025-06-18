@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, ElementRef, HostListener, ViewChild } from "@angular/core";
-import { MatDialog } from "@angular/material/dialog";
-import { MatTableDataSource } from "@angular/material/table";
+import { MatLegacyDialog as MatDialog } from "@angular/material/legacy-dialog";
+import { MatLegacyTableDataSource as MatTableDataSource } from "@angular/material/legacy-table";
 import { LookupPopupComponent } from "src/app/data/components/lookup-popup/lookup-popup.component";
 import { TestMock } from "src/app/data/mocks/test-mock/test-mock";
 import { TestItemModel } from "src/app/data/model/test-model/test-item.model";
